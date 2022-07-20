@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <link rel="shortcut icon" href="./assets/images/favicon.png">
+    <meta charset="UTF-8">
+    <title>网址导航</title>
+    <script>
+    if (navigator.appName == "Netscape") {
+        var language = navigator.language;
+    } else {
+        var language = navigator.browserLanguage;
+    }
+
+    if (language.indexOf("en") > -1) {
+        document.location.href = "en/index.html";
+    } else if (language.indexOf("zh") > -1) {
+        document.location.href = "cn/index.html";
+    }
+    </script>
+</head>
+
+<body>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111463289-1');
+    </script>
+</body>
+
+</html>
